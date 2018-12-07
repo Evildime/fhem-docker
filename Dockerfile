@@ -167,9 +167,13 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
         libxml-simple-perl \
         libnet-sip-perl \
         libxml-stream-perl \
+        libdigest-md5-perl \
+        libcrypt-cbc-perl \
+        libcrypt-ecb-perl \
     && cpanm \
         Net::MQTT::Constants \
         Net::MQTT::Simple \
+        Crypt::Rijndael_PP \
     && if [ "${ARCH}" = "amd64" ] || [ "${ARCH}" = "i386" ]; then \
          cpanm \
            Crypt::Cipher::AES \
