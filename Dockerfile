@@ -60,6 +60,7 @@ LABEL org.fhem.description=${L_DESCR_FHEM}
 
 ENV TERM xterm
 
+
 # Configure environment
 COPY ./src/qemu-* /usr/bin/
 
